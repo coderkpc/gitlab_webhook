@@ -17,10 +17,10 @@
 
 ## 讨论
 
-有问题请在[issue](http://mq.code.sangfor.org/66582/mss_webhook/issues)讨论
+有问题请在[issue](https://github.com/coderkpc/gitlab_webhook/issues)讨论
 
 1. 后续打算用ESModule而不是Commonjs的方式来写，看了下ts4.7版本的更新好像已经在nodejs中支持了，因为interface好像不支持用Commonjs来导入导出😱
-2. 有一个想法就是在处理完release合入master的事件以后自动创建一个 “从master合入integration-test”的pr指派给苏哥，要去找找创建合并请求的api🤔
+2. 有一个想法就是在处理完release合入master的事件以后自动创建一个 “从master合入integration-test”的pr指派给主程序员，要去找找创建合并请求的api🤔
 3. 学着编写shell，还有最近比较火的zx，实现对比分支落后多少commit的自动化
 
 
@@ -34,6 +34,7 @@
 - Node版本: 16.14.0
 
 - typescript: 4.7.4
+
 - express: 4.17.3
 
 ## 部署步骤
