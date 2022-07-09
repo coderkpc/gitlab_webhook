@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const fetch = require('node-fetch');
+const dayjs = require('dayjs');
 const { group } = require('../const/index');
 
 /**
@@ -36,18 +37,18 @@ const successInform = function (msg: string): void {
  * @param {*} msg 错误信息，不能包含双引号 ""
  */
 const errorInform = function (msg: string): void {
-    inform("@某个大佬" + msg, group);
+    inform("@处理人 " + msg, group);
 };
 
 /**
  * 本地打印日志
  * @param {*} msg 错误信息，不能包含双引号 ""
  */
-const log = function (msg: string) {
+ const log = function (msg: string) {
   const logFile = fs.createWriteStream(path.join(__dirname, "../../log.txt"), {
       flags: "a",
   });
-  logFile.write(`\nnode log: ${Date()} \n${msg}`);
+  logFile.write(`\n当前时间: ${dayjs().format('YYYY年MM月DD日 hh时mm分ss秒')} \n${msg}\n`);
 };
 
 module.exports = {
